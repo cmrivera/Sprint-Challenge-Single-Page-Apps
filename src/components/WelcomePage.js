@@ -1,30 +1,39 @@
 import React from "react";
+import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 export default function WelcomePage() {
+  const Page = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  `;
+  const Img = styled.img`
+    margin-top: 10%;
+    margin-left: 15%;
+  `;
   return (
-    <section className="welcome-page">
-      <header>
-        <h1>Welcome to the ultimate fan site!</h1>
+    <section className="welcome-page">	    
+      <header>	     
+        <h1>Welcome to the ultimate fan site!</h1>	        
+      
+      <Link to="/Characters">
+      <button>Characters</button>
+              </Link>
 
-               <Nav>
-             <Link to="/Characters">              <Button variant="outlined" color="primary"> Characters
-            </Button>	           
-          </Link>	              
-          <Link to="/Search">	           
-            <Button variant="outline" color="primary"> Search	
-            </Button>            
-          </Link>	             
-          <Link to="/Locations">	           
-            <Button variant="outlined" color="primary">	Locations            
-          </Link>
-          </Nav>
+              <Link to="/Search">
+                <button>Search</button>
+              </Link>
+          <Img
+            className="main-img"
+            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+            alt="rick"
+          />
+        </header>
+      </section>
+  
+  </Page>
+  )	  };
 
-        <img
-          className="main-img"
-          src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-          alt="rick"
-        />
-      </header>
-    </section>
-  );
-}
