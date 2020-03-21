@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import styled from "styled-components";
+//import styled from "styled-components";
 import CharacterCard from "./CharacterCard";
 import { Link } from "react-router-dom";
 
@@ -39,13 +39,13 @@ export default function SearchForm() {
         </Link>
       </form>
 
-      {data.map(char => {
+      {data.map(character => {
         return (
           <CharacterCard
-            key={char.id}
-            name={char.name}
-            species={char.species}
-            status={char.status}
+            key={character.id}
+            name={character.name}
+            species={character.species}
+            status={character.status}
           />
         );
       })}
