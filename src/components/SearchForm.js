@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-//import styled from "styled-components";
+import styled from "styled-components";
 import CharacterCard from "./CharacterCard";
 import { Link } from "react-router-dom";
 
